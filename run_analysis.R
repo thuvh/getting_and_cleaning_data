@@ -44,4 +44,4 @@ melt_data <- melt(all_data, id = id_labels, measure.vars = data_labels)
 tidy_data <- dcast(melt_data, subject + activity_name ~ variable, mean)
 
 # View(tidy_data)
-write_table(tidy_data, file = "./result_data.txt")
+write.table(tidy_data, file = "./result_data.txt", row.names = FALSE)
